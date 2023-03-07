@@ -1,7 +1,0 @@
-Create an environment
-> mkdir myproject
-> cd myproject
-> py -3 -m venv venv
-
-Activate environment
-> venv\Scripts\activate
