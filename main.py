@@ -1,5 +1,5 @@
 """
-Moduł flask
+
 """
 from flask import Flask, render_template, request
 
@@ -7,24 +7,22 @@ main = Flask(__name__)
 
 
 @main.route("/")
-def index():
+def hello():
     """
-       Funkcja wyświetla napis "Hello World"
 
-       """
-    return "Hello, world!"
+    """
+    return render_template("hello.html")
 
 
 @main.route("/hello", methods=["GET", "POST"])
-def hello():
+def greet():
     """
-       Funkcja "/hello" wyświetla formularz z polem, które umożliwia wpisanie imienia.
-       Po przesłaniu, aplikacja wyświetli "Hello, (name)!".
 
-       """
+    """
     if request.method == "POST":
-        name = request.form.get("name")
-        return f"Hello, {name}!"
+        name = request.form["name"]
+        greeting = "Hello " + name
+        return render_template("response.html", greeting=greeting)
     return render_template("hello.html")
 
 
