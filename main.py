@@ -5,17 +5,18 @@ main = Flask(__name__)
 
 
 @main.route("/")
-def index():
-    
-    return "Hello, world!!"
+def hello():
+   
+    return render_template("hello.html")
 
 
 @main.route("/hello", methods=["GET", "POST"])
-def hello():
+def greet():
    
     if request.method == "POST":
-        name = request.form.get("name")
-        return f"Hello, {name}!"
+        name = request.form["name"]
+        greeting = "Hello " + name
+        return render_template("respond.html", greeting=greeting)
     return render_template("hello.html")
 
 
