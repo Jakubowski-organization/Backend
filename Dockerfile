@@ -1,16 +1,16 @@
-#Obraz Dockera oparty na obrazie Pythona w wersji 3.10.10
+
 FROM python:3.10.10
-#Zmienna środowiskowej
-ENV FLASK_APP=main.py
-#Katalog roboczy
+
+ENV PYTHONUNBUFFERED 1
+
 WORKDIR /app
-#Kopiowanie pliku requirements.txt
+
 COPY requirements.txt .
-#Instalacja pakietów z requirements.txt
+
 RUN pip install -r requirements.txt
-#Kopiowanie plików
+
 COPY . .
-#Wybranie portu
-EXPOSE 8000
-#Uruchomienie pliku main.py
+
+EXPOSE 8080
+
 CMD ["python", "main.py"]
