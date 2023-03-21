@@ -9,7 +9,7 @@ COPY requirements.txt .
 #Instalacja pakietów z pliku requirements.txt
 RUN pip install -r requirements.txt
 #Kopiowanie plików
-COPY . /app
+COPY . .
 #Wybranie portu
 EXPOSE 8080
 #Uruchomienie pliku main.py
