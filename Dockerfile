@@ -1,7 +1,7 @@
 #Obraz Dockera będzie oparty na obrazie Pythona w wersji 3.10.10
 FROM python:3.10.10
 #Ustawienie zmiennej środowiskowej
-ENV FLASK_APP=app.py
+ENV FLASK_APP=main.py
 #Katalog roboczy
 WORKDIR /app
 #Skopiowanie pliku requirements.txt
