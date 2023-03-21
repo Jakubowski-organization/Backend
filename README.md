@@ -5,5 +5,5 @@ aby utworzyć obraz z pliku Dockerfile
 
 3. Nastepnie ustawić port :8000 
 
-4. Na koniec w przeglądarce internetowej wpisać "localhost:8000"
+4. Na koniec w przeglądarce internetowej wpisać "localhost:8080"
 
