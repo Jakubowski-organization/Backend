@@ -13,4 +13,4 @@ COPY . /app
 #Wybranie portu
 EXPOSE 8080
 #Uruchomienie pliku main.py
-CMD ["python", "app.py"]
+CMD ["python", "main.py"]
