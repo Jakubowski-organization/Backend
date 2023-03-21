@@ -11,6 +11,6 @@ RUN pip install -r requirements.txt
 #Kopiowanie plików
 COPY . .
 #Wybranie portu
-EXPOSE 8080
+EXPOSE 8000
 #Uruchomienie pliku main.py
 CMD ["python", "main.py"]
